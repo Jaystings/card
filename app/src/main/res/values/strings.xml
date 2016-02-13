@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Card</string>
+    <string name="pg1">Hello user!</string>
+    <string name="pg2">Change this text in src/res/values/strings.xml.
+        </string>
+    <string name="pg3">Sincerely, James</string>
+</resources>
