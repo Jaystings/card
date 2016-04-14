@@ -11,11 +11,19 @@ public class EditPrompt extends AppCompatActivity {
         setContentView(R.layout.activity_edit_prompt);
     }
 
+<<<<<<< HEAD
     public void Cancel(){
 
     }
 
     public void SaveChanges(){
+=======
+    public void SaveChanges(){
+
+    }
+
+    public void Cancel(){
+>>>>>>> 86f61ca8c567aa181d720eeecdbe3c2bc7292e96
 
     }
 }
