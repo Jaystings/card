@@ -4,6 +4,7 @@
 
 package com.jaystings.card;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,14 +25,24 @@ public class BookActivity extends AppCompatActivity {
 
     private ProgressBar pbSpinner;
 
+    // Flips until the secret editing menu is opened.
+    private final int DEFAULT_TEM_VAL = 10;
+    private int tillEditMenu = DEFAULT_TEM_VAL;
+
+    private final String PREFS_NAME = "cardSettings";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
 
-        ActionBar actionBar = getActionBar();
         pbSpinner = (ProgressBar) findViewById(R.id.pbSpinner);
         viewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper);
+
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+
+
+
     }
 
     /* Method for turning the pages without showing an animation, using buttons.
@@ -46,14 +57,28 @@ public class BookActivity extends AppCompatActivity {
 
         int pgNum = viewFlipper.getDisplayedChild();
         // Identify which button was pressed
+        // If left arrow was pressed 10 times on first page, open menu
         if(v.getId() == R.id.btnFlipL){
-            if (pgNum == 0) return;
-            pbSpinner.setVisibility(View.VISIBLE);
-            viewFlipper.setDisplayedChild(--pgNum);
-            pbSpinner.setVisibility(View.GONE);
+            if (pgNum == 0) {
+                tillEditMenu--;
+                if(tillEditMenu == 0){
+                    System.out.println("Open Sesame!");
+                    // Open Edit Menu Prompt
+                    Intent i = new Intent(this, EditPrompt.class);
+                    startActivity(i);
+                    tillEditMenu = DEFAULT_TEM_VAL;
+                }
+                return;
+            } else {
+                tillEditMenu = DEFAULT_TEM_VAL;
+                pbSpinner.setVisibility(View.VISIBLE);
+                viewFlipper.setDisplayedChild(--pgNum);
+                pbSpinner.setVisibility(View.GONE);
+            }
         }
         else{
             if (pgNum == 2) return;
+            tillEditMenu = DEFAULT_TEM_VAL;
             pbSpinner.setVisibility(View.VISIBLE);
             viewFlipper.setDisplayedChild(++pgNum);
             pbSpinner.setVisibility(View.GONE);
