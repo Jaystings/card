@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/Card local.iml" filepath="$PROJECT_DIR$/Card local.iml" />
-=======
->>>>>>> 86f61ca8c567aa181d720eeecdbe3c2bc7292e96
+      <module fileurl="file://$PROJECT_DIR$/Card.iml" filepath="$PROJECT_DIR$/Card.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/card.iml" filepath="$PROJECT_DIR$/card.iml" />
     </modules>
   </component>
 </project>
