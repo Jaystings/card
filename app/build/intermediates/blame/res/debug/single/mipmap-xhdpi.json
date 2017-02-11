@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/jaystings/StudioProjects/card/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
+        "source": "/home/jaystings/StudioProjects/card/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/jaystings/StudioProjects/card/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_card.png",
+        "source": "/home/jaystings/StudioProjects/card/app/src/main/res/mipmap-xhdpi/ic_card.png"
+    }
+]

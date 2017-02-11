@@ -1,0 +1,7 @@
+#Sat Feb 11 12:00:09 EST 2017
+base.0=/home/jaystings/StudioProjects/card/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_875848154108b1d4e348b88936c88483fc13b292
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/jaystings/StudioProjects/card/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_5f43cd34575e7283a2dd2d5ba59120a972167f7f/classes.dex
+base.1=/home/jaystings/StudioProjects/card/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_5f43cd34575e7283a2dd2d5ba59120a972167f7f
+file.0=/home/jaystings/StudioProjects/card/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_875848154108b1d4e348b88936c88483fc13b292/classes.dex

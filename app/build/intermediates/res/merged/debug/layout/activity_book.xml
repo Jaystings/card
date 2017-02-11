@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".BookActivity"
+    android:background="#000000"
+    >
+    <ProgressBar
+        android:id="@+id/pbSpinner"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <ViewFlipper
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/viewFlipper"
+        >
+
+        <include layout="@layout/frag_pg1"></include>
+
+        <include layout="@layout/frag_pg2"></include>
+
+        <include layout="@layout/frag_pg3"></include>
+
+    </ViewFlipper>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=">"
+        android:id="@+id/btnFlipR"
+        android:layout_alignBaseline="@+id/viewFlipper"
+        android:layout_alignBottom="@+id/viewFlipper"
+        android:layout_alignRight="@+id/viewFlipper"
+        android:layout_alignEnd="@+id/viewFlipper"
+        android:layout_alignParentRight="true"
+        android:onClick="TurnPage"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;"
+        android:layout_alignBaseline="@+id/viewFlipper"
+        android:layout_alignBottom="@+id/viewFlipper"
+        android:layout_alignLeft="@+id/viewFlipper"
+        android:layout_alignParentLeft="true"
+        android:onClick="TurnPage"
+        android:id="@+id/btnFlipL" />
+</RelativeLayout>

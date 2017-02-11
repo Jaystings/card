@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 import android.content.Intent;
 
@@ -27,6 +28,10 @@ public class BookActivity extends AppCompatActivity {
     private final int DEFAULT_TEM_VAL = 10;
     private int tillEditMenu = DEFAULT_TEM_VAL;
 
+    private TextView txtPg1;
+    private TextView txtPg2;
+    private TextView txtPg3;
+
     private final String PREFS_NAME = "cardSettings";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +44,20 @@ public class BookActivity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
 
+        txtPg1 = (TextView)findViewById(R.id.txtPg1);
+        txtPg2 = (TextView)findViewById(R.id.txtPg2);
+        txtPg3 = (TextView)findViewById(R.id.txtPg3);
 
+        Intent intent = getIntent();
+        if(intent.hasExtra("s1")){
+            txtPg1.setText(intent.getStringExtra("s1"));
+        }
+        if(intent.hasExtra("s2")){
+            txtPg2.setText(intent.getStringExtra("s2"));
+        }
+        if(intent.hasExtra("s3")){
+            txtPg3.setText(intent.getStringExtra("s3"));
+        }
 
     }
 
